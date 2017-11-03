@@ -1,4 +1,4 @@
-console.log(youtube_data);
+	//console.log(youtube_data);
 
 	/*
 	*	youtube_data.hovervolume 	0 (none) 1 (active sound on hover) 2 (same 1, but disable sound if quit area)	
@@ -17,7 +17,7 @@ console.log(youtube_data);
 		player = new YT.Player(youtube_data.container_id, {
 			width: '100%',
 			videoId: youtube_data.id,
-			playerVars: { 'autoplay': youtube_data.autoplay, 'controls':  youtube_data.controls },
+			playerVars: { 'autoplay': youtube_data.autoplay, 'controls':  youtube_data.controls, 'playlist' : youtube_data.id , 'loop' : youtube_data.loop, 'modestbranding' : youtube_data.modestbranding, 'showinfo' : youtube_data.showinfo },
 		    events: {
 		      'onReady': onPlayerReady,
 		      //'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
@@ -28,7 +28,7 @@ console.log(youtube_data);
 	}
 	
 
-	// 4. The API will call this function when the video player is ready.
+	//player ready set var
 	function onPlayerReady(event) {
 		if( youtube_data.hovervolume > 0 ){
 			event.target.setVolume(0);
@@ -42,26 +42,8 @@ console.log(youtube_data);
 				});
 			}
 		}
-		/*
-		if( youtube_data.autoplay ){
-			event.target.playVideo();
-		}
-		*/
 	}
 
-	// 5. The API calls this function when the player's state changes.
-	//    The function indicates that when playing a video (state=1),
-	//    the player should play for six seconds and then stop.
-	/*var done = false;
-	function onPlayerStateChange(event) {
-		if (event.data == YT.PlayerState.PLAYING && !done) {
-			setTimeout(stopVideo, 6000);
-			done = true;
-		}
-	}*/
-	
-	function stopVideo() {
-		player.stopVideo();
-	}
+
 	
 	

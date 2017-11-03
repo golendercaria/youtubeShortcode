@@ -5,12 +5,15 @@
 	
 	function shortcode_youtube( $atts ){
 	    $atts = shortcode_atts( array(
-		    'id'          	=> null,
-	        'autoplay' 		=> false,
-	        'apikey'   		=> null,
-	        'container_id'	=> "youtube_player",
-	        'controls'		=> 2,
-	        'hovervolume'	=> false
+		    'id'          		=> null,
+	        'autoplay' 			=> false,
+	        'apikey'   			=> null,
+	        'container_id'		=> "youtube_player",
+	        'controls'			=> 2,
+	        'hovervolume'		=> false,
+	        'loop'				=> 0,
+	        'modestbranding' 	=> 1,
+	        'showinfo'			=> 0,
 	    ), $atts );
 	    
 	    ?><div id="<?php echo $atts["container_id"]; ?>"></div><?php
