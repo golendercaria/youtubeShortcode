@@ -16,7 +16,7 @@
 	        'showinfo'			=> 0,
 	    ), $atts );
 	    
-	    ?><div id="<?php echo $atts["container_id"]; ?>"></div><?php
+	    ?><div style="position: relative; padding-top: 56.25%; height: 0; width: 100%;"><div id="<?php echo $atts["container_id"]; ?>" style="z-index: 10; position: absolute; top:0; left: 0; width: 100%; height: 100%;"></div></div><?php
 		wp_localize_script('youtube_script', 'youtube_data', $atts );
 		wp_enqueue_script("youtube_script");
 	}

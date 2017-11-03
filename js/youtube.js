@@ -16,6 +16,7 @@
 	function onYouTubeIframeAPIReady() {
 		player = new YT.Player(youtube_data.container_id, {
 			width: '100%',
+			height:'50%',
 			videoId: youtube_data.id,
 			playerVars: { 'autoplay': youtube_data.autoplay, 'controls':  youtube_data.controls, 'playlist' : youtube_data.id , 'loop' : youtube_data.loop, 'modestbranding' : youtube_data.modestbranding, 'showinfo' : youtube_data.showinfo },
 		    events: {
