@@ -18,7 +18,7 @@
 			width: '100%',
 			height:'50%',
 			videoId: youtube_data.id,
-			playerVars: { 'autoplay': youtube_data.autoplay, 'controls':  youtube_data.controls, 'playlist' : youtube_data.id , 'loop' : youtube_data.loop, 'modestbranding' : youtube_data.modestbranding, 'showinfo' : youtube_data.showinfo },
+			playerVars: { 'autoplay': youtube_data.autoplay, 'controls':  youtube_data.controls, 'playlist' : youtube_data.id , 'loop' : youtube_data.loop, 'modestbranding' : youtube_data.modestbranding, 'showinfo' : youtube_data.showinfo, 'rel': 0 },
 		    events: {
 		      'onReady': onPlayerReady,
 		      //'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
