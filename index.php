@@ -8,7 +8,9 @@
 		    'id'          	=> null,
 	        'autoplay' 		=> false,
 	        'apikey'   		=> null,
-	        'container_id'	=> "youtube_player"
+	        'container_id'	=> "youtube_player",
+	        'controls'		=> 2,
+	        'hovervolume'	=> false
 	    ), $atts );
 	    
 	    ?><div id="<?php echo $atts["container_id"]; ?>"></div><?php
